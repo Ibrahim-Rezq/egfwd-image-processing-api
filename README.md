@@ -6,6 +6,8 @@ This is a Project made For the First assignment for Udacity Advanced Full-Stack 
 
 -   [Overview](#overview)
     -   [The challenge](#the-challenge)
+    -   [The scripts](#the-scripts)
+    -   [EndPoints created](#endpoints-created)
     -   [Links](#links)
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
@@ -18,6 +20,18 @@ This is a Project made For the First assignment for Udacity Advanced Full-Stack 
 Users should be able to:
 
 -  Process Images using the API and get a link for later use and cache Images for quicker load
+
+### THe scripts
+
+- dev_server => npm run start-dev
+- build server => npm run start
+- formater (lint and prettier) => npm run formate
+- build => npm run build 
+- test => npm run test 
+
+### EndPoints created
+ 
+ -localhost:1337/api/images
 
 ### Links
 
