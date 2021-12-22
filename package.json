@@ -1,0 +1,41 @@
+{
+  "name": "udacity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build": "npx tsc",
+    "jasmine": "jasmine",
+    "test": "npm run build && npm run jasmine",
+    "start-dev": "nodemon src/index.ts",
+    "start": "npm run build && node dist/index",
+    "lint": "eslint . --ext .ts",
+    "prettier": "prettier --config .prettierrc \"./src/*.ts\" --write",
+    "formate": "npm run prettier && npm run lint"
+  },
+  "author": "Ibrahim_Amin_Rezq",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jasmine": "^3.10.2",
+    "@types/node": "^16.11.14",
+    "@types/supertest": "^2.0.11",
+    "@types/sharp": "^0.29.4",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "ts-node": "^10.4.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^1.19.1",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jasmine": "^3.10.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "sharp": "^0.29.3",
+    "supertest": "^6.1.6"
+  }
+}
