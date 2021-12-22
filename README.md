@@ -6,7 +6,6 @@ This is a Project made For the First assignment for Udacity Advanced Full-Stack 
 
 -   [Overview](#overview)
     -   [The challenge](#the-challenge)
-    -   [Screenshot](#screenshot)
     -   [Links](#links)
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
