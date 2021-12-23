@@ -2,7 +2,7 @@ import express from 'express';
 import { Request, Response } from 'express';
 import * as path from 'path';
 import fs from 'fs';
-import prossesImg from './prossesingImg';
+import prossesImg from '../utilities/prossesingImg';
 
 const imgRoute = express.Router();
 
