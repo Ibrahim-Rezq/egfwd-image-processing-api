@@ -2,7 +2,7 @@ import sharp from "sharp"
 import fs from 'fs'
 import * as path from 'path';
 
-const prossesImg=(imgPath:string,newImgPath:string,width:number,height:number,callback:Function):void=>{
+const prossesImg=(imgPath:string,newImgPath:string,width:number,height:number,callback:CallableFunction):void=>{
 sharp(imgPath)
 .rotate()
 .resize(width, height)

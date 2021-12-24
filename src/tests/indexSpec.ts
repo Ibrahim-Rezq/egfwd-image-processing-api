@@ -18,9 +18,9 @@ describe('Test endpoint responses', () => {
 )});
 
 
-const name: string = "fjord";
-const width: number = 500;
-const height: number = 500;
+const name = "fjord";
+const width = 500;
+const height = 500;
 
 const imgPath: string = path.resolve(
     'Assets',
