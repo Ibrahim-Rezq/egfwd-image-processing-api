@@ -19,7 +19,7 @@ sharp(imgPath)
         'Assets',
         'images',
         `Error.jpg`
-    )), console.log(err);
+    ));
 });
 }
 
