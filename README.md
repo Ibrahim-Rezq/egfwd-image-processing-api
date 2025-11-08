@@ -1,60 +1,133 @@
-# Udacity - Image-Processing-API
+# Image Processing API  
+A TypeScript / Node.js API for dynamic image resizing and caching.  
+Built as an assignment for the Full‑Stack Development Nanodegree (EGFWD).
 
-This is a Project made For the First assignment for Udacity Advanced Full-Stack Nanodegree program
+---
 
-## Table of contents
+## 🎯 Purpose  
+This project was created as part of the EGFWD Full‑Stack Development program.  
+It provides a backend service that:  
+- Accepts a request for an existing image file by name + width + height.  
+- Resizes the image using the `sharp` library.  
+- Caches the resized version for future requests (to improve performance).  
+- Serves the processed image.  
 
--   [Overview](#overview)
-    -   [The challenge](#the-challenge)
-    -   [The scripts](#the-scripts)
-    -   [EndPoints created](#endpoints-created)
-    -   [Links](#links)
-    -   [Built with](#built-with)
-    -   [What I learned](#what-i-learned)
--   [Author](#author)
+---
 
-## Overview
+## 💡 Learning Takeaways  
+Working on this project helped me:  
+- Get hands‑on with **TypeScript** in a Node/Express backend.  
+- Use the `sharp` image‑processing library for resizing and caching logic.  
+- Structure an API with clear separation (routes → controllers → services).  
+- Set up and run unit tests using **Jasmine**.  
+- Understand build tooling and production readiness for TypeScript projects.
 
-### The challenge
+---
 
-Users should be able to:
+## 🧩 Technologies Used  
+- **TypeScript**  
+- **Node.js**  
+- **Express**  
+- **sharp** (image processing & caching)  
+- **Jasmine** (unit testing)  
+- **ESLint / Prettier** (code quality & formatting)  
 
--  Process Images using the API and get a link for later use and cache Images for quicker load
+---
 
-### THe scripts
+## 🚀 Getting Started  
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/Ibrahim-Rezq/egfwd-image-processing-api.git
+    ````
 
-- dev_server => npm run start-dev
-- build server => npm run start
-- formater (lint and prettier) => npm run formate
-- build => npm run build 
-- test => npm run test 
+2. Navigate into the project folder:
 
-### EndPoints created
- 
- -localhost:1337/api/images
+   ```bash
+   cd egfwd-image-processing-api
+   ```
+3. Install dependencies:
 
-### Links
+   ```bash
+   npm install
+   ```
 
-- Solution URL: [Udacity Image Processing API Project](https://github.com/Ibrahim-Rezq/Testimonials-grid-section-challenge)
+### Running Locally
 
-### Built with
+* Development mode (watch / auto-restart):
 
--   TypeScript
--   NodeJs 
--   Express ( Server )
--   Jasmine ( Testing )
--   Sharp ( Image Processing)
+  ```bash
+  npm run start-dev
+  ```
+* Production build & start:
 
-### What I learned
+  ```bash
+  npm run start
+  ```
 
-Doing this challenge helped me 
-- learn using TypeScript and get familiar with its syntax 
-- learn using NodeJs and how it works in the background
-- how to use  express to make a server and a simple API
-- using middleware and making my own
-- using jasmine for testing and how it works
+### Testing & Linting
 
-<!-- ## Author -->
+* Run tests:
 
-<!-- -   Website - [Ibrahim-Rezk](https://www.your-site.com) -->
-<!-- -   Twitter - [@yourusername](https://www.twitter.com/yourusername) -->
+  ```bash
+  npm run test
+  ```
+* Lint code:
+
+  ```bash
+  npm run lint
+  ```
+* Format code:
+
+  ```bash
+  npm run formate
+  ```
+
+---
+
+## 📂 Usage
+
+### API Endpoint
+
+`GET /api/images`
+
+### Query Parameters
+
+* `filename` (string, required) — name of the source image file (in `assets/images/full/`)
+* `width` (integer, required) — desired width in pixels
+* `height` (integer, required) — desired height in pixels
+
+### Example Request
+
+```
+http://localhost:3000/api/images?filename=santamonica&width=300&height=200
+```
+
+If a cached version exists for that size, it’s returned; otherwise the image is resized, saved to cache (e.g., `assets/images/thumb/`), then returned.
+
+---
+
+## 🏗 Project Structure
+
+```
+├── assets/
+│   ├── images/
+│   │   ├── full/      ← original high-res images
+│   │   └── thumb/     ← cached resized images
+├── src/
+│   ├── controllers/   ← route handlers
+│   ├── routes/        ← Express routes
+│   ├── services/      ← image processing logic
+│   └── index.ts       ← app entry point
+├── spec/              ← unit tests
+├── tsconfig.json
+├── package.json
+└── README.md
+```
+
+---
+
+## ✍️ Credits
+
+Developed by **Ibrahim Rezq** for the EGFWD nanodegree.
+Assignment: build an image-processing API with caching and dynamic resizing.
+
